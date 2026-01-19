@@ -1,6 +1,16 @@
 <?php
-  // init.php ফাইলটি লোড করুন যা app ফোল্ডারের ভেতর আছে
-  require_once '../app/init.php';
+session_start();
 
-  // অ্যাপটি চালু করুন
-  $init = new App;
+// Load Config
+require_once '../app/config/config.php';
+
+// Load Helpers (ADD THIS LINE)
+require_once '../app/helpers/helpers.php';
+
+// Autoload Core Libraries
+spl_autoload_register(function($className) {
+    require_once '../app/core/' . $className . '.php';
+});
+
+// Init Core Library
+$init = new App();

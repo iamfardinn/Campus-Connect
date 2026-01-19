@@ -10,6 +10,37 @@ class Faculty extends Controller {
         $this->resourceModel = $this->model('ResourceModel');
         $this->bookingModel = $this->model('BookingModel');
     }
+    public function browse_resources() {
+    // Check authentication - DON'T use isLoggedIn()
+    if(!isset($_SESSION['user_id']) || $_SESSION['user_role'] != 'Faculty') {
+        header('location: ' . URLROOT . '/auth/login');
+        exit();
+    }
+    
+    // Get all resources from model
+    $resources = $this->resourceModel->getResources();
+    
+    // Count available resources
+    $availableCount = 0;
+    if($resources) {
+        foreach($resources as $resource) {
+            if($resource->available_capacity > 0) {
+                $availableCount++;
+            }
+        }
+    }
+    
+    $data = [
+        'resources' => $resources,
+        'total_resources' => count($resources),
+        'available_resources' => $availableCount,
+        'active_bookings' => 0,
+        'pending_requests' => 0
+    ];
+    
+    $this->view('faculty/browse_resources', $data);
+}
+
 
     public function index() {
         // Faculty home: can see overall status or resources

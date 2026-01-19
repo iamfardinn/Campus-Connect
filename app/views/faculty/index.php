@@ -388,17 +388,12 @@
 
     <ul class="sidebar-menu">
         <li>
-            <a href="#" class="sidebar-link">
+            <a href="<?php echo URLROOT; ?>/faculty/browse_resources" class="sidebar-link">
                 <i class="bi bi-search"></i>
                 <span>Browse Resources</span>
             </a>
         </li>
-        <li>
-            <a href="#" class="sidebar-link">
-                <i class="bi bi-clock-history"></i>
-                <span>History</span>
-            </a>
-        </li>
+        
         <li>
             <a href="#" class="sidebar-link">
                 <i class="bi bi-star-fill"></i>
