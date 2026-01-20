@@ -2,8 +2,12 @@
 
 A comprehensive campus resource booking and management system built with PHP MVC architecture. Streamlines the process of booking campus facilities, managing endorsements, tracking resource utilization, and campus announcements.
 
-## MVC Structure
-C:/xampp/htdocs/campus_connect/
+
+## Project Structure
+
+```
+campus_connect/
+│
 ├── app/
 │   ├── config/
 │   │   └── config.php
@@ -68,18 +72,17 @@ C:/xampp/htdocs/campus_connect/
 │
 ├── public/
 │   ├── assets/
-│   │
 │   ├── css/
 │   │   └── style.css
-│   │
 │   ├── js/
 │   │   └── main.js
-│   │
 │   ├── .htaccess
 │   └── index.php
 │
 ├── .htaccess
 └── README.md
+```
+
 
 
 ## Features
