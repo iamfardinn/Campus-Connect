@@ -2,6 +2,86 @@
 
 A comprehensive campus resource booking and management system built with PHP MVC architecture. Streamlines the process of booking campus facilities, managing endorsements, tracking resource utilization, and campus announcements.
 
+## MVC Structure
+C:/xampp/htdocs/campus_connect/
+├── app/
+│   ├── config/
+│   │   └── config.php
+│   │
+│   ├── controllers/
+│   │   ├── Admin.php
+│   │   ├── Auth.php
+│   │   ├── Faculty.php
+│   │   ├── Pages.php
+│   │   └── Student.php
+│   │
+│   ├── core/
+│   │   ├── App.php
+│   │   ├── Controller.php
+│   │   └── Database.php
+│   │
+│   ├── helpers/
+│   │   └── helpers.php
+│   │
+│   ├── models/
+│   │   ├── BookingModel.php
+│   │   ├── ReportModel.php
+│   │   ├── ResourceModel.php
+│   │   └── UserModel.php
+│   │
+│   ├── views/
+│   │   ├── admin/
+│   │   │   ├── analytics.php
+│   │   │   ├── index.php
+│   │   │   ├── manage_resources.php
+│   │   │   └── user_management.php
+│   │   │
+│   │   ├── auth/
+│   │   │   ├── login.php
+│   │   │   ├── register.php
+│   │   │   └── reset_password.php
+│   │   │
+│   │   ├── faculty/
+│   │   │   ├── browse_resources.php
+│   │   │   ├── bulk_request.php
+│   │   │   ├── endorse_requests.php
+│   │   │   ├── endorsements.php
+│   │   │   └── index.php
+│   │   │
+│   │   ├── layouts/
+│   │   │   ├── footer.php
+│   │   │   ├── header.php
+│   │   │   └── navbar.php
+│   │   │
+│   │   ├── pages/
+│   │   │   └── index.php
+│   │   │
+│   │   └── student/
+│   │       ├── book.php
+│   │       ├── index.php
+│   │       ├── my_bookings.php
+│   │       ├── report_issue.php
+│   │       ├── reports.php
+│   │       └── search.php
+│   │
+│   └── init.php
+│
+├── public/
+│   ├── assets/
+│   │
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   └── main.js
+│   │
+│   ├── .htaccess
+│   └── index.php
+│
+├── .htaccess
+└── README.md
+
+
 ## Features
 
 ### Student Features
